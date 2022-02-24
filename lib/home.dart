@@ -3,13 +3,28 @@ import 'package:flutter/material.dart';
 import 'ChoiceButton.dart';
 
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+
+  final String photo;
+  final Color c;
+  const Home(this.photo, this.c);
+
+  // const Home({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
         backgroundColor: Color.fromRGBO(42, 19, 1, 1.0),
-        body: Column(
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              fit: BoxFit.fill,
+              // Background   Color
+              // 5.jpg        Color.fromRGBO(255, 220, 14, 1.0)
+              // 4.jpg        Colors.amberAccent
+
+              image: AssetImage(photo),
+            ),
+          ),
+        child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
               children: [
         Padding(
@@ -39,7 +54,8 @@ class Home extends StatelessWidget {
                             ),
                             child: Padding(
                               padding: EdgeInsets.only(top: 88, left: 88),
-                              child: Icon(Icons.edit_location_rounded, color: Colors.amber,size: 35),
+
+                              child: Icon(Icons.edit_location_rounded, color: c,size: 35),
                           ),
                           ),
                       Padding(
@@ -64,7 +80,7 @@ class Home extends StatelessWidget {
                           padding: EdgeInsets.only(top: 20, bottom: 40),
                           child: TextButton(
                               style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
+                                backgroundColor: MaterialStateProperty.all<Color>(c),
                                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(30),
@@ -106,6 +122,7 @@ class Home extends StatelessWidget {
             ]
 
           ),
+        )
     );
   }
 }

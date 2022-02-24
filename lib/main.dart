@@ -12,7 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Home(),
+      // Background   Color
+      // 5.jpg        Color.fromRGBO(255, 220, 14, 1.0)
+      // 4.jpg        Colors.amberAccent
+      // -            Colors.amber
+      home: Home("4.jpg", Colors.amberAccent),
     );
   }
 }

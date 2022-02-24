@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       // 5.jpg        Color.fromRGBO(255, 220, 14, 1.0)
       // 4.jpg        Colors.amberAccent
       // -            Colors.amber
-      home: Home("4.jpg", Colors.amberAccent),
+      home: Home("5.jpg", Color.fromRGBO(255, 220, 14, 0.7)),
     );
   }
 }

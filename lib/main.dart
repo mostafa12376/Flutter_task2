@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       // Background   Color
-      // 5.jpg        Color.fromRGBO(255, 220, 14, 1.0)
-      // 4.jpg        Colors.amberAccent
+      // 5.jpg        Color.fromRGBO(255, 221, 25, 0.6))
+      // 4.jpg        Color.fromRGBO(200, 200, 0, 0.6)
       // -            Colors.amber
-      home: Home("5.jpg", Color.fromRGBO(255, 220, 14, 0.7)),
+      home: Home("5.jpg", Color.fromRGBO(255, 221, 25, 0.6)),
     );
   }
 }
